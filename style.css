@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+}
+/* <----------Header-----------> */
+
+header{
+    text-align: center;
+    margin: 33.5px 0 33.5px 0;
+}
+header h1{
+    display: inline;
+    font-weight: 300;
+    font-size: 55px;
+    border: 1px black solid;
+    padding: 10px 50px 10px 50px;
+}
+
+/* <-----MENU------> */
+nav li {
+    list-style-type: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+.hlavni{
+    justify-content: left;
+}
+nav li:hover ul li{
+    display: flex; 
+    justify-content: left;
+}
+nav li ul li{
+    display: none;
+    text-align: left;
+}
+nav a {
+    text-decoration: none;
+    color: currentColor;
+    font-size:  23px;
+    display: block;
+} 
+nav ul li {
+    display: inline;
+    text-align: left;
+}
+nav {
+    display: block;
+}
+.navbar {
+    margin: auto;
+    padding: 1px 2rem;
+    background: #3a4750;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.nav-obal {
+    margin-top: 40px;
+}
+.hlavni {
+    gap: 2rem;
+    padding: 0;
+}
+.drop-down{
+    color: black;
+    padding-left: 0;
+}
+nav > ul > li:hover, .drop-down li:hover {
+    color: #d3d6db; 
+}
+.zaliby:hover .drop-down {
+    display: block;
+}
+
+
+/* <----------Main---------> */
+.flex{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.flex img{
+    width: 95%;
+    margin: auto;
+    border-radius: 1rem;
+}
+.text {
+    width: 95%;
+    background-color: whitesmoke;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+.text, .footer {
+    margin: auto;
+}
+.text p{
+    padding: 15px;
+}
+.text p {
+    font-size: 20px;
+}
+.fotky {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 100%;
+    flex-wrap: wrap;
+    align-content: center;
+}
+.fotky img {
+    width: 98%;
+    margin-bottom: 15px;
+}
+
+/* <--------PATA---------> */
+
+.footer {
+    text-align: center;
+    background: #3a4750; 
+    margin-top: 15px;
+}
+.footer p {
+    color: #d3d6db;
+    padding: 5px 0 10px 0;
+    margin: 0;
+    font-size: 19px;
+}
+
+/* <----------Responzivita--------> */
+
+
+
+@media screen and (min-width: 720px){
+    .flex{
+        flex-direction: row ;
+        justify-content: center;
+    }
+    .flex img{
+        width: 55%;
+        margin: 0;
+        border-radius: 1rem;
+    }
+    .nav-obal {
+        display: flex;
+    }
+    .navbar{
+        border-radius: 1rem;
+    }
+    .hlavni{
+        display: flex;
+    }
+    .drop-down {
+        position: absolute;
+        padding: 0.5rem 0;
+        margin: 0.5rem -1rem;
+        background-color: #3a4750; 
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        border-radius: 0.5rem;
+        display: none;
+    }
+    nav > ul > li:hover, .drop-down li:hover {
+        background-color: #303841;
+        color: #d3d6db; 
+        border-radius: 0.5rem;
+    }
+}
+
+@media screen and (min-width: 1000px){
+    .fotky {
+        flex-direction: row;
+    }
+    .fotky img {
+        width: 33%;
+    }
+    .flex img{
+        width: 35%;
+    }
+}
+
+@media screen and (min-width: 1300px){
+    .flex img{
+        width: 25%;
+    }
+}
